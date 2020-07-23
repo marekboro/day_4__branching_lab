@@ -16,10 +16,21 @@ def personal_top_three(scores):
 
 
 def sorted_descending_order(scores):
-    resulting_list = scores
-    resulting_list.sort(reverse = True)
-    return resulting_list
+    scores.sort(reverse=True)
+    return scores
     
+    #resulting_list = scores
+    #resulting_list.sort(reverse = True)
+    #return resulting_list
+    
+def top_three(scores):
+    to_return = []
+    sorted_descending_order(scores)
+    for i in range(0,3):
+        to_return.append(scores[i])
+    return to_return
+
+
 
 
 #print(sorted_descending_order([1, 2, 3, 4, 5,]))
