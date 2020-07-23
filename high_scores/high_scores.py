@@ -22,7 +22,9 @@ def sorted_descending_order(scores):
     #resulting_list = scores
     #resulting_list.sort(reverse = True)
     #return resulting_list
-    
+
+
+# May be worth coming back here and making just one method for returning top 3 regardless how many scores are in the list
 def top_three(scores):
     to_return = []
     sorted_descending_order(scores)
@@ -33,10 +35,14 @@ def top_three(scores):
 def top_three_less_than_three_scores(scores):
     scores.sort(reverse=True)
     less_than_3_scores =[]
-
-    less_than_3_scores.append(scores[0])
-    less_than_3_scores.append(scores[1])
-    less_than_3_scores.append(0)
+    if len(scores)==2:
+        less_than_3_scores.append(scores[0])
+        less_than_3_scores.append(scores[1])
+        less_than_3_scores.append(0)
+    if len(scores)==1:
+        less_than_3_scores.append(scores[0])
+        less_than_3_scores.append(0)
+        less_than_3_scores.append(0)
 
     return less_than_3_scores
     #a_copy
