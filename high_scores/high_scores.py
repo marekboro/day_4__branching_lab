@@ -30,7 +30,16 @@ def top_three(scores):
         to_return.append(scores[i])
     return to_return
 
+def top_three_less_than_three_scores(scores):
+    scores.sort(reverse=True)
+    less_than_3_scores =[]
 
+    less_than_3_scores.append(scores[0])
+    less_than_3_scores.append(scores[1])
+    less_than_3_scores.append(0)
+
+    return less_than_3_scores
+    #a_copy
 
 
 #print(sorted_descending_order([1, 2, 3, 4, 5,]))
