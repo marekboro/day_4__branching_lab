@@ -1,12 +1,19 @@
 def latest(scores):
     return scores[-1]
 
-    pass
 
 
 def personal_best(scores):
-    pass
+    return max(scores)
+
 
 
 def personal_top_three(scores):
-    pass
+    resulting_list = []
+    
+
+    while len(resulting_list) <3:
+        resulting_list.append(personal_best(scores))
+        scores.remove(personal_best(scores))
+    return resulting_list
+
