@@ -7,9 +7,16 @@ from high_scores import latest, personal_best, personal_top_three
 
 class HighScoresTest(unittest.TestCase):
 
+    def setUp(self):
+        self.scores = [100,30,4,1]
+    
+    def test_latest_score_is_1(self):
+        result = latest(self.scores)
+        self.assertEqual(1,result)
     # Tests
 
     # Test latest score (the last thing in the list)
+
 
     # Test personal best (the highest score in the list)
 
