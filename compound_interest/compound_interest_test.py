@@ -2,12 +2,21 @@ import unittest
 
 from compound_interest import CompoundInterest
 
-class CompoundInterestTest(unittest.TestCase):
 
+class CompoundInterestTest(unittest.TestCase):
+    
     # Tests
+    def test_compound_interest_return_73281_on_100_10percent_20_years(self):
+        calculator = CompoundInterest(100,10,20)
+        result = calculator.calculate_compound_interest()
+        self.assertEqual(732.81, result)
 
     # Should return 732.81 given 100 principal, 10 percent, 20 years
-
+    
+    def test_compound_interest_return_18194_on_100_6percent_10_years(self):
+        calculator = CompoundInterest(100,6,10)
+        result = calculator.calculate_compound_interest()
+        self.assertEqual(181.94, result)
     # Should return 181.94 given 100 principal, 6 percent, 10 years
 
     # Should return 149,058.55 given 100000 principal, 5 percent, 8 years
