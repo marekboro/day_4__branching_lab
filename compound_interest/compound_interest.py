@@ -4,6 +4,7 @@ class CompoundInterest:
         self.principal_amount = principal_amount
         self.annual_rate = annual_rate
         self.years = years
+        self.monthly_addition = monthly_addition.
     
     def calculate_compound_interest(self):
         
@@ -14,6 +15,8 @@ class CompoundInterest:
         
         a = (p*(1+(r/n)) ** (n*t))
         return round(a,2)
+
+    
 
 #print("12121")
 
